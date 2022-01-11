@@ -11,7 +11,7 @@ ApplicationContext applicationContext = new AnnotationConfigApplicationContext(A
 1. Create Spring Container  
 ![image](https://user-images.githubusercontent.com/71700079/148956338-2f69a52d-06cb-4731-b4bd-70066ae3492e.png)  
 
-2. Spring Bean Regist  
+2. Spring Bean Register  
 ![image](https://user-images.githubusercontent.com/71700079/148956445-bd33064e-86db-450c-9c92-be0bb79b2ec1.png)  
 - 여기서 Bean의 이름이 겹쳐버리면, 오류가 발생할 수가 있다.
 - 따라서 반드시 Bean의 이름들은 다르게 부여할 것!
