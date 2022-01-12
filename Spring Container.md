@@ -19,3 +19,10 @@ ApplicationContext applicationContext = new AnnotationConfigApplicationContext(A
 3. Dependancy Injection in Bean  
 ![image](https://user-images.githubusercontent.com/71700079/148956710-27782462-bb2b-4ef8-838e-82c24364e06d.png)  
 - 우리가 미리 설계 해놓은 대로 의존 관계(Dependancy)를 주입한다.
+
+## Web Application & Singleton
+> 스프링은 대부분 Web Application이다.  
+> Web Application은 보통 여러 고객이 동시에 요청을 하게 된다.  
+> 이 때, 요청 시 마다 DI Container이 객체를 매번 생성하게 되면, 메모리에 객체의 수가 무한정으로 늘어나게 되어 버린다.  
+> 이는 매우 심한 메모리의 낭비, 이 때 필요한 것이 __Singleton Pattern!__  
+
