@@ -75,3 +75,9 @@
 - Appconfig가 앞서 말했던 __공연 기획자__ 의 역할이다.
 - 우리(배우)가 직접 구현체를 선택하는 것이 아니다.
 - 우리는 역할(Interface)만 선언을 해주고, __AppConfig__ 가 어떤 구현체를 사용할 것인지를 정해줄 것이다.
+
+## BONUS : LOMBOK
+> Java에는 Spring 개발에 매우 유용한 LOMBOK이라는 Tool이 존재한다.  
+- ```@Getter```
+- ```@Setter```
+- ```@RequiredArgsConstructor```
