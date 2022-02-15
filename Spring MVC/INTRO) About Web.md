@@ -34,25 +34,24 @@
   - WAS, DB 장애시 WEB server가 정적 페이지로 오류화면을 제공한다.
 ![image](https://user-images.githubusercontent.com/71700079/150331154-739fde5c-8508-4d7e-882b-8afeaf8b45e4.png)  
 
-## Servelet
+## Servlet
 > HTTP의 요청 및 응답 정보를 굉장히 편리하게 다룰 수 있게 해주는 툴이다.  
 > 따라서 개발자는 HTTP 스펙을 매우 편하게 다룰 수 있다.  
 - HTTP Request가 들어오면,
-  - WAS는 Request, Response 객체를 새로 만들어서 Servelet 객체를 호출한다.
+  - WAS는 Request, Response 객체를 새로 만들어서 Servlet 객체를 호출한다.
   - 개발자는 Request 객체에서 HTTP 요청 정보를 편하게 꺼내서 사용.
   - 마찬가지로 Response 객체에서 HTTP 응답 정보를 편하게 꺼내서 사용.
 
-### Servelet Container
-- TOMCAT과 같이 Servelet을 지원하는 WAS를 Servelet Container이라고 한다.
-- 기본적으로 Servelet 객체 생성, 초기화, 호출, 소멸하는 생명주기를 가진다.
-- Servelet 객체는 Singleton으로 관리된다.
+### Servlet Container
+- TOMCAT과 같이 Servlet을 지원하는 WAS를 Servlet Container이라고 한다.
+- 기본적으로 Servlet 객체 생성, 초기화, 호출, 소멸하는 생명주기를 가진다.
+- Servlet 객체는 Singleton으로 관리된다.
   - 고객의 요청마다 새로운 객체를 생성하는 것은 비효율적이다.
   - 최초 로딩 시점에 객체를 미리 만들어두고 재활용한다.
   - 따라서 모든 고객의 요청은 동일한 객체에 대한 접근.
   - __공유 변수__ 사용에 있어서 주의할 것!
 
 ## Thread
-
 ### 요청마다 쓰레드를 생성한다면?
 - 장점
   - 동시 요청을 처리할 수 있다.
