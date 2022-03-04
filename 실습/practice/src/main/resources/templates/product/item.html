@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/bootstrap.min.css}"
+          href="../css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container{
+            max-width: 800px;
+        }
+    </style>
+    <title th:text="${product.id} + '번 글'"></title>
+</head>
+<body>
+
+<div class="container">
+    <br>
+    <br>
+    <div>
+        <lable for="itemId" th:text="#{label.item.id}"></lable>
+        <input type="text" id="itemId" name="itemId" class="form-control" th:value="${product.id}" readonly>
+    </div>
+    <div>
+        <label for="itemName" th:text="#{label.item.itemName}"></label>
+        <input type="text" id="itemName" name="itemName" class="form-control" th:value="${product.title}" readonly>
+    </div>
+    <hr class="my-4">
+    <div>
+        <textarea class="form-control" rows="20"
+                  th:value="${product.content}" th:text="${product.content}" readonly></textarea>
+    </div>
+
+    <hr class="my-4">
+
+    <div class="row">
+        <div class="col">
+            <button class="w-100 btn btn-primary btn-lg"
+                    onclick="location.href='editForm.html'"
+                    th:onclick="|location.href='@{/product/{productId}/edit(productId=${product.id})}'|"
+                    type="button" th:text="#{page.updateItem}"></button>
+        </div>
+        <div class="col">
+            <button class="w-100 btn btn-primary btn-lg"
+                    onclick="location.href='items.html'"
+                    th:onclick="|location.href='@{/product}'|"
+                    type="button" th:text="#{page.items}"></button>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/bootstrap.min.css}"
+          href="../css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container{
+            max-width: 800px;
+        }
+        .field-error{
+            border-color: red;
+            color: red;
+        }
+    </style>
+    <title>게시글 작성</title>
+</head>
+<body>
+<style>
+    p{
+        border-radius: 30px 30px 30px 0;
+        border: 5px solid #FFAD5B;
+        padding: 1em 1em;
+        color: orange;
+        font-weight: bold;
+    }
+</style>
+<div class="container">
+
+    <div class="py-5 text-center">
+        <p th:text="#{page.addItem}"></p>
+    </div>
+    <form action="item.html" th:action th:object="${product}" method="post">
+        <div>
+            <label for="itemName" th:text="#{label.item.itemName}"></label>
+            <input type="text" id="itemName" th:field="*{title}"
+                   th:errorclass="field-error" class="form-control" placeholder="제목을 작성해주세요">
+            <div class="field-error" th:errors="*{title}"></div>
+        </div>
+        <hr class="my-4">
+        <div>
+            <textarea id="price" rows="20" th:field="*{content}"
+                   th:errorclass="field-error" class="form-control" placeholder="글을 작성해주세요"></textarea>
+            <div class="field-error" th:errors="*{content}"></div>
+        </div>
+        <hr class ="my-4">
+        <div class="row">
+            <div class="col">
+                <button class="w-100 btn btn-primary btn-lg" type="submit" th:text="#{page.addItem}"></button>
+            </div>
+            <div class="col">
+                <button class="w-100 btn btn-primary btn-lg"
+                        onclick="location.href='items.html'"
+                        th:onclick="|location.href='@{/product}'|"
+                        type="button" th:text="#{button.cancel}">취소</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
