@@ -5,11 +5,6 @@
 </p>
 <br/>
 
-### AI Programming Study with PNU!  
-- [Basic Python Grammer](https://github.com/Jinseop-Sim/Python-Study)
-
-
-
 
 
 <p align="center">
